@@ -3,11 +3,11 @@ import userIcon from "../assets/user.png";
 import { useContext } from "react";
 import { authContext } from "../provider/AuthProvider";
 const Navbar = () => {
-  const { user } = useContext(authContext)
+  const { user } = useContext(authContext);
   return (
     <div className="flex justify-between items-center">
       <div className="">
-        {user.name}
+        {user && user.name}
       </div>
       <div className="nav space-x-5">
         <Link to="/">Home</Link>
